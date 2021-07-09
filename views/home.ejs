@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALCHER STREAM</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/alcher.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section class="head-container">
+        <div class="container-fluid title">
+            <!-- NAV BAR -->
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="pic/logo.svg" alt="" width="160" height="44"></a>
+                    <!-- SEARCH BAR -->
+
+                    <!-- SEARCH BAR END -->
+
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                        <ul class="navbar-nav navUl">
+                            <li class="nav-item">
+                                <form class="d-flex">
+                                    <input class="form-control me-2 search" id="inputValue" type="search" placeholder="Search"
+                                        aria-label="Search">
+
+                                </form>
+                            </li>
+                            <li class="nav-item">
+                              <a class="btn btn-light btn-dark navbtn" href="/login" role="button">Login</a>
+
+                            </li>
+                            <li class="nav-item">
+                              <a class="btn btn-light btn-dark navbtn" href="/logout" role="button">Logout</a>
+
+                            </li>
+                            <li class="nav-item">
+                                <!-- <a class="btn btn-light btn-dark navbtn" href="/login" role="button">Login</a> -->
+                                  <a class="btn btn-light btn-dark navbtn" href="/signup" role="button">Sign up</a>
+
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown link
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Movies</a></li>
+                                    <li><a class="dropdown-item" href="#">Shows</a></li>
+                                    <li><a class="dropdown-item" href="#">News</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+            <div class="container-fluid titleDiv">
+                <h1 class="stroke">STREAM ALL THE POPULAR <br> MOVIES ON THE GO</h1>
+                <button id="search" class="btn btn-primary btn-lg headBtn">START HERE</button>
+            </div>
+        </div>
+
+
+    </section>
+    <span class="badge bg-light text-dark">Fan Favourite</span>
+
+
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item  container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top changeimage n" width="300px" height="400px" src="public/pic/3.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text moviedes">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                    <form class="w" action="/watchlist" method="post">
+                                     <input type="hidden" name="listName"  class="hid" value= "Stranger things"></input>
+                                      <button type="submit" class="btn btn-primary wb" id="watchbtn1" value="https://i.pinimg.com/564x/4e/f7/ac/4ef7acad284e02a0243f29dd80f7d868.jpg" name="button">Watchlist <i class="fa fa-star" aria-hidden="true"></i></button>
+                                    </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top changeimage n" width="300px" height="400px" src="pic/2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text moviedes">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                    <form class="w" action="/watchlist" method="post">
+                                          <input type="hidden"  class="hid" name="listName" value= "Loki"></input>
+                                      <button type="submit" class="btn btn-primary wb"  id="watchbtn2" value="https://townsquare.media/site/442/files/2021/03/loki-teaser-poster.jpg?w=1600&q=75" name="button">Watchlist <i class="fa fa-star" aria-hidden="true"></i></button>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+̥                 <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top changeimage n" width="300px" height="400px" src="pic/1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text moviedes">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                    <form class="w" action="/watchlist" method="post">
+                                      <button type="submit" class="btn btn-primary wb"  id="watchbtn3" value="https://m.media-amazon.com/images/M/MV5BMjI0MDMzNTQ0M15BMl5BanBnXkFtZTgwMTM5NzM3NDM@._V1_.jpg" name="button">Watchlist <i class="fa fa-star" aria-hidden="true"></i></button>
+                                       <input type="hidden"  class="hid" name="listName" value= "A quiet place"></input>
+                                    </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item active container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top changeimage n" width="300px" height="400px" src="pic/4.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text moviedes">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                    <form class="w" action="/watchlist" method="post">
+                                      <button type="submit" class="btn btn-primary wb"  id="watchbtn4" value="https://i.pinimg.com/564x/c5/b4/09/c5b409667553b0dfa705c182782ab158.jpg" name="button">Watchlist <i class="fa fa-star" aria-hidden="true"></i></button>
+                                       <input type="hidden"  class="hid" name="listName" value= "Space Jam 2"></input>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top changeimage n" width="300px" height="400px" src="pic/5.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text moviedes">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                    <form class="w" action="/watchlist" method="post">
+                                      <button type="submit" class="btn btn-primary wb"  id="watchbtn5" value="https://images-na.ssl-images-amazon.com/images/I/91Ju%2B9pP9kL._SL1500_.jpg" name="button">Watchlist <i class="fa fa-star" aria-hidden="true"></i></button>
+                                       <input type="hidden" class="hid" name="listName" value= "The lord of the ring"></input>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top changeimage n" width="300px" height="400px" src="pic/6.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text moviedes">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                    <form class="w" action="/watchlist" method="post">
+                                      <button type="submit" class="btn btn-primary wb"  id="watchbtn6" value="https://rukminim1.flixcart.com/image/832/832/poster/h/m/z/posterskart-the-shawshank-redemption-poster-pksr01-medium-original-imaebcuhbuhfhryb.jpeg?q=70" name="button">Watchlist <i class="fa fa-star" aria-hidden="true"></i></button>
+                                         <input type="hidden" class="hid" name="listName" value= "Shawshank Redemption"></input>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev scroll " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carbtn carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next scroll" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carbtn carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+    </div>
+</div>
+    <section>
+
+    <span class="badge bg-light text-dark">Explore what's streaming</span>
+
+    <div class="container-fluid btngrp">
+<button type="button" onclick="toggle_visibility('netflix','hotstar','prime','voot','netflix')" class="btn d btn-secondary">Netflix</button>
+<button type="button" onclick="toggle_visibility('netflix','hotstar','prime','voot','hotstar')" class="btn btn-secondary">Hotstar</button>
+<button type="button" onclick="toggle_visibility('netflix','hotstar','prime','voot','prime')" class="btn btn-secondary">amazon prime</button>
+<button type="button" onclick="toggle_visibility('netflix','hotstar','prime','voot','voot')" class="btn btn-secondary">Voot</button>
+</div>
+
+
+
+    <div id="netflix" class="carousel slide net"  data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/7.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/29.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/40.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item active container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/30.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/31.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/32.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev " type="button" data-bs-target="#netflix" data-bs-slide="prev">
+            <span class="carbtn carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next " type="button" data-bs-target="#netflix" data-bs-slide="next">
+            <span class="carbtn carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+    </div>
+</div>
+</section>
+<section>
+
+
+
+
+    <div id="hotstar" class="carousel slide hns"  data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/8.png" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/26.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/12.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item active container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/13.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/15.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/14.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev " type="button"  data-bs-target="#hotstar" data-bs-slide="prev">
+            <span class="carbtn carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next " type="button" data-bs-target="#hotstar" data-bs-slide="next">
+            <span class="carbtn carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+    </div>
+</div>
+</section>
+<section>
+
+
+
+
+    <div id="prime" class="carousel slide hns" data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/9.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/16.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/17.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item active container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/20.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/19.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/18.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev " type="button"  data-bs-target="#prime" data-bs-slide="prev">
+            <span class="carbtn carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next " type="button" data-bs-target="#prime" data-bs-slide="next">
+            <span class="carbtn carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+    </div>
+</div>
+</section>
+<section>
+
+
+
+
+
+    <div id="voot" class="carousel slide hns" data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/10.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/24.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/24.png" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item active container-fluid">
+                <div class="row">
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/23.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4 col-md-6">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/25.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-column col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top n" width="300px" height="400px" src="pic/21.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev " type="button" data-bs-target="#voot" data-bs-slide="prev">
+            <span class="carbtn carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next " type="button" data-bs-target="#voot" data-bs-slide="next">
+            <span class="carbtn carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+    </div>
+</div>
+</section>
+<section>
+      <span class="badge bg-light text-dark">From your watchlist</span>
+      <div class="accordion last">
+    <ul>
+
+      <li>
+        <div class="image_title">
+          <a href="#">Transformers: The Last Knight</a>
+        </div>
+        <a href="https://ibb.co/gGv6QS"><img src="https://image.ibb.co/k7P0kS/transformers4_640x320.jpg" alt="transformers4_640x320" border="0"></a>
+      </li>
+      <% if (typeof watchItems =='object' && watchItems) { %>
+
+    <%  for(let i=0;i<watchItems.length;i++){  %>
+
+
+        <li>
+          <div class="image_title">
+
+            <a href="#"> <%= watchTitle[i] %> </a>
+          </div>
+          <a href="https://ibb.co/gGv6QS"><img class="im" src="<%= watchItems[i] %>" alt="transformers4_640x320" border="0" ></a>
+        </li>
+<%  } %>
+<% } %>
+
+</ul>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+     <div class="row">
+       <div class="footer-col">
+         <h4>Sitesoch</h4>
+         <ul>
+           <li><a href="#">Home</a></li>
+           <li><a href="#">About</a></li>
+           <li><a href="#">Pricing</a></li>
+           <li><a href="#">Privacy Policy</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>Get Help</h4>
+         <ul>
+           <li><a href="#">Shipping</a></li>
+           <li><a href="#">Returns</a></li>
+           <li><a href="#">Order Status</a></li>
+           <li><a href="#">Payment Options</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>Address</h4>
+         <ul>
+           <li><a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate adipisci quia ab omnis id ipsum quae inventore </a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>follow us</h4>
+         <div class="social-links">
+           <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
+           <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+           <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+           <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+         </div>
+       </div>
+     </div>
+    </div>
+ </footer>
+
+
+
+
+
+        <script src="public/alcher.js"></script>
+</body>
+
+</html>
